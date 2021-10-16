@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import React, { useState, useEffect, createContext } from 'react';
 
 import Nav from './Components/Nav';
+import SubNav from './Components/SubNav';
 import Footer from './Components/Footer';
-import Home from './Components/Home';
+import SignedInHome from './Components/SignedInHome';
 import EntirePlayList from './Components/EntirePlayList';
 import FavoritePlayList from './Components/FavoritePlayList';
 import History from './Components/History';
@@ -13,7 +14,7 @@ import TrendingAirPlane from './Components/TrendingAirPlane';
 import TrendingBoats from './Components/TrendingBoats';
 import TrendingCars from './Components/TrendingCars';
 import TrendingMotorcycles from './Components/TrendingMotorcycles';
-import LikedVideos from './Components/Home';
+import LikedVideos from './Components/SignedInHome';
 
 export const ListContext = createContext();
 
@@ -49,11 +50,12 @@ function App() {
           }}
         >
           <Nav />
+          <SubNav />
 
           <Switch>
             <Route exact path='/'>
               {' '}
-              <Home />{' '}
+              <SignedInHome />{' '}
             </Route>
             <Route exact path='/entireplaylist'>
               {' '}
