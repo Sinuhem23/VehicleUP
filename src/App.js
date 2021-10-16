@@ -1,10 +1,97 @@
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { useState, useEffect, createContext } from 'react';
+
+import Nav from './Components/Nav';
+import Footer from './Components/Footer';
+import Home from './Components/Home';
+import EntirePlayList from './Components/EntirePlayList';
+import FavoritePlayList from './Components/FavoritePlayList';
+import History from './Components/History';
+import LandingPage from './Components/LandingPage';
+import TrendingAirPlane from './Components/TrendingAirPlane';
+import TrendingBoats from './Components/TrendingBoats';
+import TrendingCars from './Components/TrendingCars';
+import TrendingMotorcycles from './Components/TrendingMotorcycles';
+import LikedVideos from './Components/Home';
+
+export const ListContext = createContext();
 
 function App() {
+  const [youTube, setYouTube] = useState([]);
+  const [term, setTerm] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+
+  // YOUTUBE API SECTION ////////////
+
+  const YT_API = `https://www.googleapis.com/youtube/v3/search?&part=snippet&maxResults=10&q=${term}+politics&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`;
+
+  useEffect(() => {
+    console.log('useEffect runs: API fetch');
+    fetch(YT_API)
+      .then((resp) => resp.json())
+      .then((res) => setYouTube(res.items || []));
+    setIsLoading(false);
+  }, [term, isLoading, YT_API]);
+  console.log(youTube);
+
+  // END OF YOUTUBE API SECTION //////////
+
   return (
-    <div className='App'>
-      <h2>Hello</h2>
-    </div>
+    <Router>
+      <div className='App'>
+        <ListContext.Provider
+          value={{
+            youTube,
+            isLoading,
+            term,
+            setTerm,
+          }}
+        >
+          <Nav />
+
+          <Switch>
+            <Route exact path='/'>
+              {' '}
+              <Home />{' '}
+            </Route>
+            <Route exact path='/entireplaylist'>
+              {' '}
+              <EntirePlayList />
+            </Route>
+            <Route exact path='/favoriteplaylist'>
+              {' '}
+              <FavoritePlayList />
+            </Route>
+            <Route exact path='/history'>
+              {' '}
+              <History />
+            </Route>
+            <Route exact path='/landingpage'>
+              {' '}
+              <LandingPage />
+            </Route>
+            <Route exact path='/trendingairplane'>
+              <TrendingAirPlane />
+            </Route>
+            <Route exact path='/trendingboats'>
+              <TrendingBoats />
+            </Route>
+            <Route exact path='/trendingcars'>
+              <TrendingCars />
+            </Route>
+            <Route exact path='/trendingmotorcycles'>
+              <TrendingMotorcycles />
+            </Route>
+            <Route exact path='/likedvideos'>
+              <LikedVideos />
+            </Route>
+          </Switch>
+        </ListContext.Provider>
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
