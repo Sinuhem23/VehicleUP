@@ -9,15 +9,15 @@ export default function SubNav() {
         {/* -- Sub-Navbar -- */}
         {/* -- The navigation menu -- */}
         <div class='sub_navbar'>
-          <a href='./liked_videos.html'>Liked Videos</a>
+          <a href='./likedvideos'>Liked Videos</a>
           <div class='subnav'>
             <button class='subnavbtn'>
               Playlist <i class='fa fa-caret-down'></i>
             </button>
             <div class='subnav-content'>
-              <a href='./entire_playlist.html'>All</a>
+              <a href='./entireplaylist'>All</a>
 
-              <a href='./playlist_Favorite_List.html'>Favorite List</a>
+              <a href='./favoriteplaylist'>Favorite List</a>
             </div>
           </div>
           <div class='subnav'>
@@ -36,14 +36,14 @@ export default function SubNav() {
               Trending <i class='fa fa-caret-down'></i>
             </button>
             <div class='subnav-content'>
-              <a href='./trending_boats.html'>Boats</a>
-              <a href='./trending_cars.html'>Cars</a>
-              <a href='./trending_motorcycle.html'>Motorcycles</a>
-              <a href='./trending_airplane.html'>Airplanes</a>
-              <a href='./actual_Landing_Page.html'>All</a>
+              <a href='./trendingboats'>Boats</a>
+              <a href='./trendingcars'>Cars</a>
+              <a href='./trendingmotorcycles'>Motorcycles</a>
+              <a href='./trendingairplanes'>Airplanes</a>
+              <a href='./signedinhome'>All</a>
             </div>
           </div>
-          <a href='./history_page.html'>History</a>
+          <a href='./history'>History</a>
         </div>
         {/* -- End of Sub-Navbar -- */}
       </div>

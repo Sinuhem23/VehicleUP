@@ -14,7 +14,7 @@ import TrendingAirPlane from './Components/TrendingAirPlane';
 import TrendingBoats from './Components/TrendingBoats';
 import TrendingCars from './Components/TrendingCars';
 import TrendingMotorcycles from './Components/TrendingMotorcycles';
-import LikedVideos from './Components/SignedInHome';
+import LikedVideos from './Components/LikedVideos';
 
 export const ListContext = createContext();
 
@@ -74,7 +74,7 @@ function App() {
               {' '}
               <SignedInHome />
             </Route>
-            <Route exact path='/trendingairplane'>
+            <Route exact path='/trendingairplanes'>
               <TrendingAirPlane />
             </Route>
             <Route exact path='/trendingboats'>
