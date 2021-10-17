@@ -49,9 +49,10 @@ function App() {
             setTerm,
           }}
         >
-          <Nav />
-          <SubNav />
-
+          <div className='all_Navbar_Container'>
+            <Nav />
+            <SubNav />
+          </div>
           <Switch>
             <Route exact path='/'>
               {' '}

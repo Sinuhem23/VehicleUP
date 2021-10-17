@@ -1,0 +1,88 @@
+/* Airplane Videos Section ////////////////// */
+
+.entire_uploads {
+  background: rgb(56, 56, 56);
+  /* padding: 6em 5em; */
+  margin: 4em 2em 8em 2em;
+  max-height: 500px;
+}
+.entire_uploads > h3 {
+  display: grid;
+  position: sticky;
+  top: 0;
+  color: white;
+  margin-left: 10px;
+  padding: 10px;
+  justify-content: center;
+
+  background-color: rgb(56, 56, 56);
+}
+.container_scroll {
+  overflow: scroll;
+}
+
+.recently_added_playlist_videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 1em;
+  padding: 1em;
+}
+.main_Favorite_Video {
+  display: flex;
+  justify-content: center;
+  height: 30rem;
+  width: auto;
+  padding: 1rem;
+}
+.main_iframe {
+  height: 100%;
+  width: 100%;
+}
+/* End of Aiplane Video Section ////////////////// */
+
+/* Footer Section  ////////////////////*/
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid rgb(238, 238, 238);
+  box-shadow: -3px -3px lightgray;
+}
+.footer_top_btn {
+  height: 3em;
+  justify-content: center;
+  width: 120px;
+}
+/* End of Footer Section  ////////////////////*/
+
+/* Media Section  ////////////////////*/
+/* For Big Screens */
+@media (min-width: 1020px) {
+  .recently_added_playlist_videos {
+    grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
+    padding: 5em;
+    grid-gap: 4em;
+  }
+}
+@media (max-width: 650px) {
+  /* Entire Playlist Section  ////////////////////////// */
+  .entire_uploads {
+    padding: 0;
+    display: grid;
+    margin: 3em 22px;
+  }
+  .entire_uploads h3 {
+    color: white;
+    padding: 20px;
+  }
+  .recently_added_playlist_videos {
+    grid-gap: 2em;
+  }
+  /* End of Entire Playlist Section ////////////////////////// */
+
+  /* End of Media Section  ////////////////////*/
+}
