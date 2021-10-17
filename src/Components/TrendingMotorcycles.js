@@ -1,4 +1,5 @@
 import React from 'react';
+import '../CSS/trendingmotorcycles.css';
 
 function TrendingMotorcycles() {
   return (

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../CSS/entireplaylist.css';
 
 function entirePlayList() {
   return (

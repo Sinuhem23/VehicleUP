@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../CSS/subnav.css';
 
 export default function SubNav() {
   return (

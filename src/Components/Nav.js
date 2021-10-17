@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../CSS/nav.css';
 
 export default function Nav() {
   return (
@@ -7,8 +8,8 @@ export default function Nav() {
       {/* --Navbar   -- */}
       <nav class='nav'>
         <div>
-          <a href='./home_page.html'>
-            <img class='icon-1' src='../images/gears.png' />
+          <a href='/'>
+            <img class='icon-1' src='../images/gears.png'></img>
           </a>
         </div>
         <h1 class='website_name'>
@@ -19,7 +20,7 @@ export default function Nav() {
         </div>
         <div class='icon-2'>
           <h3>
-            <a href='./home_page.html'>Home</a>
+            <a href='/'>Home</a>
           </h3>
         </div>
         <div class='icon-3'>

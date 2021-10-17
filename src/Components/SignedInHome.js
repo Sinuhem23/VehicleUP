@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { ListContext } from '../App';
 import { Link } from 'react-router-dom';
+import '../CSS/signedinhome.css';
 
 const moment = require('moment');
 

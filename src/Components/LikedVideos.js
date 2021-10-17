@@ -1,4 +1,5 @@
 import React from 'react';
+import '../CSS/likedvideos.css';
 
 function LikedVideos() {
   return (

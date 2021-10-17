@@ -1,4 +1,5 @@
 import React from 'react';
+import '../CSS/favoriteplaylist.css';
 
 function FavoritePlayList() {
   return (

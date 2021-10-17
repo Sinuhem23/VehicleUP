@@ -1,4 +1,5 @@
 import React from 'react';
+import '../CSS/trendingairplanes.css';
 
 function TrendingAirPlane() {
   return (
