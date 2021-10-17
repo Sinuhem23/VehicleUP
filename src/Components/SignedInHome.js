@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { ListContext } from '../App';
 import { Link } from 'react-router-dom';
 import '../CSS/signedinhome.css';
+import landingImage from '../images/gears_background.png';
 
 const moment = require('moment');
 
@@ -24,7 +25,7 @@ function SignedInHome() {
         </div>
 
         <button class='add_account_btn'>Add to Account</button>
-        <img class='landing_Image' src='../images/gears_background.png' />
+        <img class='landing_Image' src={landingImage} />
       </div>
 
       {/* -- End of Add Video Section -- */}

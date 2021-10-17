@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../CSS/nav.css';
+import Logo from '../images/gears.png';
 
 export default function Nav() {
   return (
@@ -9,7 +10,7 @@ export default function Nav() {
       <nav class='nav'>
         <div>
           <a href='/'>
-            <img class='icon-1' src='../images/gears.png'></img>
+            <img class='icon-1' src={Logo}></img>
           </a>
         </div>
         <h1 class='website_name'>
