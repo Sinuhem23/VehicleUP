@@ -9,7 +9,7 @@ import SignedInHome from './Components/SignedInHome';
 import EntirePlayList from './Components/EntirePlayList';
 import FavoritePlayList from './Components/FavoritePlayList';
 import History from './Components/History';
-import LandingPage from './Components/LandingPage';
+import Home from './Components/Home';
 import TrendingAirPlane from './Components/TrendingAirPlane';
 import TrendingBoats from './Components/TrendingBoats';
 import TrendingCars from './Components/TrendingCars';
@@ -56,7 +56,7 @@ function App() {
           <Switch>
             <Route exact path='/'>
               {' '}
-              <SignedInHome />{' '}
+              <Home />{' '}
             </Route>
             <Route exact path='/entireplaylist'>
               {' '}
@@ -70,9 +70,9 @@ function App() {
               {' '}
               <History />
             </Route>
-            <Route exact path='/landingpage'>
+            <Route exact path='/signedinhome'>
               {' '}
-              <LandingPage />
+              <SignedInHome />
             </Route>
             <Route exact path='/trendingairplane'>
               <TrendingAirPlane />

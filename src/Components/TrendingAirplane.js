@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TrendingAirplane() {
+function TrendingAirPlane() {
   return (
     <div>
       {/* -- Airplane Videos Section -- */}
@@ -87,4 +87,4 @@ function TrendingAirplane() {
   );
 }
 
-export default TrendingAirplane;
+export default TrendingAirPlane;
