@@ -5,33 +5,30 @@ import Logo from '../images/gears.png';
 import { ListContext } from '../App';
 
 export default function Nav() {
+  const [text, setText] = useState('');
+  const context = useContext(ListContext);
+  let term = context.term;
 
-const [text, setText] = useState('');
-const context = useContext(ListContext);
- let term = context.term;
-
- const handleSubmit = (e) => {
-    e.preventDefault();
-    let setTerm = context.setTerm;
-    setTerm(text);
-     console.log('im HERE' + term);
-  };
-
-
+  //  const handleSubmit = (e) => {
+  //     e.preventDefault();
+  //     let setTerm = context.setTerm;
+  //     setTerm(text);
+  //      console.log('im HERE ' + text);
+  //   };
 
   return (
     <div>
       {/* --Navbar   -- */}
       <nav class='nav'>
         <div>
-          <a href='/' >
+          <a href='/'>
             <img class='icon-1' src={Logo}></img>
           </a>
         </div>
         <h1 class='website_name'>
           <span>V</span>ehicle <span>U</span>ploads
         </h1>
-        <div class='search'>
+        {/* <div class='search'>
         <form className='main_input' onSubmit={handleSubmit}>
           <input type='search' 
           onChange={(e) => setText(e.target.value)}
@@ -42,7 +39,7 @@ const context = useContext(ListContext);
           Search
         </button>
         </form>
-        </div>
+        </div> */}
         <div class='icon-2'>
           <h3>
             <a href='/'>Home</a>

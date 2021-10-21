@@ -25,10 +25,9 @@ export default function SubNav() {
               Account <i class='fa fa-caret-down'></i>
             </button>
             <div class='subnav-content'>
-              <a href='#'>My favorites</a>
-              <a href='#'>My videos</a>
-              <a href='#'>My playlist</a>
-              <a href='#'>My information</a>
+              <a href='./myvideos'>My videos</a>
+
+              <a href='./myinformation'>My information</a>
             </div>
           </div>
           <div class='subnav'>

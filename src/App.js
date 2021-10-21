@@ -5,7 +5,7 @@ import React, { useState, useEffect, createContext } from 'react';
 import Nav from './Components/Nav';
 import SubNav from './Components/SubNav';
 import Footer from './Components/Footer';
-import SignedInHome from './Components/SignedInHome';
+import MyVideos from './Components/MyVideos';
 import EntirePlayList from './Components/EntirePlayList';
 import FavoritePlayList from './Components/FavoritePlayList';
 import History from './Components/History';
@@ -15,6 +15,7 @@ import TrendingBoats from './Components/TrendingBoats';
 import TrendingCars from './Components/TrendingCars';
 import TrendingMotorcycles from './Components/TrendingMotorcycles';
 import LikedVideos from './Components/LikedVideos';
+import Account from './Components/Account';
 
 export const ListContext = createContext();
 
@@ -69,9 +70,13 @@ function App() {
               {' '}
               <History />
             </Route>
-            <Route exact path='/signedinhome'>
+            <Route exact path='/myvideos'>
               {' '}
-              <SignedInHome />
+              <MyVideos />
+            </Route>
+            <Route exact path='/myinformation'>
+              {' '}
+              <Account />
             </Route>
             <Route exact path='/trendingairplanes'>
               <TrendingAirPlane />

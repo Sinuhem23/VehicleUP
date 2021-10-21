@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { ListContext } from '../App';
 import { Link } from 'react-router-dom';
-import '../CSS/signedinhome.css';
+import '../CSS/myvideos.css';
 import landingImage from '../images/gears_background.png';
 
 const moment = require('moment');
 
-function SignedInHome() {
+function MyVideos() {
   const context = useContext(ListContext);
   let youTube = context.youTube;
 
@@ -162,4 +162,4 @@ function SignedInHome() {
     </div>
   );
 }
-export default SignedInHome;
+export default MyVideos;
