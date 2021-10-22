@@ -65,9 +65,11 @@ class ListUsers extends Component {
             </thead>
             <tbody>
               {this.state.users.map((user) => (
-                <tr key={user.Userid}>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
+                <tr>
+                  <div key={user.Userid}>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                  </div>
                   <td>
                     <button
                       onClick={() => this.editUser(user.id)}

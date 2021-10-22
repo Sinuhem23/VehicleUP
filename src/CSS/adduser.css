@@ -1,3 +1,8 @@
+.signUpContainer {
+  padding: 3rem;
+  justify-items: center;
+  display: grid;
+}
 .textInfo {
   color: white;
 }

@@ -30,7 +30,7 @@ name: event.target.value,
 
 emailHandler = (event) => {
 this.setState({
-grade: event.target.value,
+email: event.target.value,
 });
 };
 
@@ -58,10 +58,9 @@ this.props.history.push('/users');
 render() {
 return (
 <div>
-<div className='container'>
-<div className='row'>
-<div className='card col-md-6 offset-md-3 offset-md-3'>
-  <h3 className='textInfo'>Add User</h3>
+
+<div className='signUpContainer'>
+  <h3 className='textInfo'>Sign Up!</h3>
   <div className='card-body'>
     <form>
       {/* <div className='form-group'>
@@ -79,7 +78,6 @@ return (
         <label>User Name: </label>
         <input
           placeholder='Name'
-          required
           name='name'
           className='form-control'
           value={this.state.name}
@@ -91,8 +89,6 @@ return (
         <input
           placeholder='Email'
           name='email'
-          // type='email'
-          required
           className='form-control'
           value={this.state.email}
           onChange={this.emailHandler}
@@ -113,8 +109,7 @@ return (
   </div>
 </div>
 </div>
-</div>
-</div>
+ 
 );
 }
 }
