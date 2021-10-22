@@ -25,7 +25,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   // YOUTUBE API SECTION ////////////
-  const YT_API = `https://www.googleapis.com/youtube/v3/search?&part=snippet&maxResults=25&q=${term}+models&key=AIzaSyB8DNHJ17xT7yTNc01rzHwVG7OFVT7AIfg`;
+  const YT_API = `https://www.googleapis.com/youtube/v3/search?&part=snippet&maxResults=25&q=vechicle+model${term}&key=AIzaSyB8DNHJ17xT7yTNc01rzHwVG7OFVT7AIfg`;
 
   useEffect(() => {
     console.log('useEffect runs: API fetch');

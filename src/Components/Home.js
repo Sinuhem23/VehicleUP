@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ListContext } from '../App';
+
 import '../CSS/home.css';
+const moment = require('moment');
 
 export default function Home() {
+  const context = useContext(ListContext);
+  let term = context.term;
+  let youTube = context.youTube;
+
   return (
     <div>
       {/* -- All Video Section -- */}
@@ -10,6 +17,47 @@ export default function Home() {
       <div class='all_uploads'>
         <h3>All Videos</h3>
         <div class='recently_added_playlist_videos'>
+          {youTube.map((vid, idx) => (
+            <div className='iframe_container'>
+              <li key={idx}>
+                <div className='youtubeLi'>
+                  <h3 className='ytTitle'>{vid.snippet.title}</h3>
+                  <div className='youtubeInfo'>
+                    <iframe
+                      width='360'
+                      height='215'
+                      src={`https://www.youtube.com/embed/${vid.id.videoId}`}
+                      title='YouTube video player'
+                      frameborder='0'
+                      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                      allowfullscreen
+                    ></iframe>
+                    <div>
+                      <h4 className='channelTitle'>
+                        {vid.snippet.channelTitle}
+                      </h4>
+                      <p className='ytDescription'>{vid.snippet.description}</p>
+                      <p className='ytDate'>
+                        {' '}
+                        {moment(vid.snippet.publishedAt).format(
+                          'dddd, MMMM Do YYYY'
+                        )}
+                      </p>
+
+                      <a
+                        className='youtubeLink'
+                        target='_blank'
+                        rel='noreferrer'
+                        href={`https://www.youtube.com/watch?v=${vid.id.videoId}`}
+                      >
+                        Youtube Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </div>
+          ))}
           <div>
             <iframe
               src='https://www.youtube.com/embed/yh9PRTMFWKk'
@@ -20,7 +68,7 @@ export default function Home() {
             ></iframe>
           </div>
 
-          <div>
+          {/* <div>
             <iframe
               src='https://www.youtube.com/embed/Cpy4cJzTqr8'
               title='YouTube video player'
@@ -306,7 +354,7 @@ export default function Home() {
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
               allowfullscreen
             ></iframe>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* -- End of All Video section -- */}
