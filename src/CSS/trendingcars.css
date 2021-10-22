@@ -10,12 +10,6 @@
   justify-content: center;
 }
 
-.recently_added_playlist_videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-gap: 1em;
-  padding: 1em;
-}
 /* End of Car Video Section ////////////////// */
 
 /* Footer Section  ////////////////////*/
@@ -48,9 +42,7 @@
   .cars_uploads h3 {
     color: white;
   }
-  .recently_added_playlist_videos {
-    grid-gap: 2em;
-  }
+
   /* End of Car Videos Section ////////////////////////// */
 
   /* End of Media Section  ////////////////////*/

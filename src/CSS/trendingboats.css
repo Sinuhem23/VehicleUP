@@ -38,7 +38,12 @@
 /* End of Footer Section  ////////////////////*/
 
 /* Media Section  ////////////////////*/
-
+/* For Big Screens */
+@media (min-width: 1020px) {
+  .recently_added_playlist_videos {
+    grid-gap: 5em;
+  }
+}
 @media (max-width: 650px) {
   /* Boat Videos Section  ////////////////////////// */
   .boats_uploads {

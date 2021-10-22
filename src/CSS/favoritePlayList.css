@@ -12,12 +12,6 @@
   padding: 1em;
 }
 
-.recently_added_playlist_videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-gap: 1em;
-  padding: 1em;
-}
 .main_Favorite_Video {
   display: flex;
   justify-content: center;
@@ -41,9 +35,7 @@
   .fav_playlist_uploads h3 {
     color: white;
   }
-  .recently_added_playlist_videos {
-    grid-gap: 2em;
-  }
+
   /* End of Favorite Videos Section ////////////////////////// */
 
   /* End of Media Section  ////////////////////*/

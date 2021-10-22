@@ -1,9 +1,11 @@
 import React from 'react';
 import '../CSS/trendingmotorcycles.css';
+import SearchBar from './SearchBar';
 
 function TrendingMotorcycles() {
   return (
     <div>
+      <SearchBar />
       {/* -- Motorcycle Videos Section -- */}
 
       <div class='motorcycle_uploads'>

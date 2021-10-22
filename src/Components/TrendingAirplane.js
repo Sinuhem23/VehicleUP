@@ -1,9 +1,11 @@
 import React from 'react';
 import '../CSS/trendingairplanes.css';
+import SearchBar from './SearchBar';
 
 function TrendingAirPlane() {
   return (
     <div>
+      <SearchBar />
       {/* -- Airplane Videos Section -- */}
 
       <div class='airplane_uploads'>

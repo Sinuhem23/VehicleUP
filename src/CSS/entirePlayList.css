@@ -6,6 +6,15 @@
   margin: 4em 2em 8em 2em;
   max-height: 500px;
 }
+.search {
+  display: flex;
+  flex: none;
+  order: 2 !important;
+  width: 100%;
+}
+.search input {
+  border-radius: 0;
+}
 .entire_uploads > h3 {
   display: grid;
   position: sticky;
@@ -21,12 +30,6 @@
   overflow: scroll;
 }
 
-.recently_added_playlist_videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-gap: 1em;
-  padding: 1em;
-}
 .main_Favorite_Video {
   display: flex;
   justify-content: center;
@@ -60,14 +63,7 @@
 /* End of Footer Section  ////////////////////*/
 
 /* Media Section  ////////////////////*/
-/* For Big Screens */
-@media (min-width: 1020px) {
-  .recently_added_playlist_videos {
-    grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
-    padding: 5em;
-    grid-gap: 4em;
-  }
-}
+
 @media (max-width: 650px) {
   /* Entire Playlist Section  ////////////////////////// */
   .entire_uploads {
@@ -79,9 +75,7 @@
     color: white;
     padding: 20px;
   }
-  .recently_added_playlist_videos {
-    grid-gap: 2em;
-  }
+
   /* End of Entire Playlist Section ////////////////////////// */
 
   /* End of Media Section  ////////////////////*/

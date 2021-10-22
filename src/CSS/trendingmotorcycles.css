@@ -10,12 +10,6 @@
   justify-content: center;
 }
 
-.recently_added_playlist_videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-gap: 1em;
-  padding: 1em;
-}
 /* End of Motorcyle Video Section ////////////////// */
 
 /* Media Section  ////////////////////*/
@@ -28,9 +22,7 @@
   .motorcycle_uploads h3 {
     color: white;
   }
-  .recently_added_playlist_videos {
-    grid-gap: 2em;
-  }
+
   /* End of Motorcycle Videos Section ////////////////////////// */
 
   /* End of Media Section  ////////////////////*/

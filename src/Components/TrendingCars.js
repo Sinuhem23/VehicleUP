@@ -1,9 +1,11 @@
 import React from 'react';
 import '../CSS/trendingcars.css';
+import SearchBar from './SearchBar';
 
 function TrendingCars() {
   return (
     <div>
+      <SearchBar />
       {/* -- Car Videos Section -- */}
 
       <div class='cars_uploads'>

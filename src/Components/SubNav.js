@@ -39,7 +39,7 @@ export default function SubNav() {
               <a href='./trendingcars'>Cars</a>
               <a href='./trendingmotorcycles'>Motorcycles</a>
               <a href='./trendingairplanes'>Airplanes</a>
-              <a href='./signedinhome'>All</a>
+              <a href='./'>All</a>
             </div>
           </div>
           <a href='./history'>History</a>

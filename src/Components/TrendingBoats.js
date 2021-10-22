@@ -1,9 +1,13 @@
-import React from 'react';
 import '../CSS/trendingboats.css';
+import React from 'react';
+
+import SearchBar from './SearchBar';
 
 function TrendingBoats() {
   return (
     <div>
+      <SearchBar />
+
       {/* -- Boat Videos Section -- */}
 
       <div class='boats_uploads'>

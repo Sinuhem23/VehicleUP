@@ -10,23 +10,10 @@
   justify-content: center;
 }
 
-.recently_added_playlist_videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-gap: 1em;
-  padding: 1em;
-}
 /* End of All Video Section ////////////////// */
 
 /* Media Section  ////////////////////*/
-/* For Big Screens */
-@media (min-width: 1020px) {
-  .recently_added_playlist_videos {
-    grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
-    padding: 1em;
-    grid-gap: 5em;
-  }
-}
+
 @media (max-width: 650px) {
   /* All Video Section  ////////////////////////// */
 
@@ -36,9 +23,7 @@
   .all_uploads h3 {
     color: white;
   }
-  .recently_added_playlist_videos {
-    grid-gap: 2em;
-  }
+
   /* End of All Video/Upload to Favorites Section ////////////////////////// */
 
   /* End of Media Section  ////////////////////*/
