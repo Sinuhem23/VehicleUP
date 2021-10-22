@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UserService from '../services/UserService';
+import UserService from '../Services/UserService';
 
 class DeleteUser extends Component {
     constructor(props)
@@ -61,11 +61,7 @@ class DeleteUser extends Component {
                           <h3 className="text-center">Delete User</h3>
                           <div className="card-body">
                               <form>  
-                                  <div className="form-group">
-                                      <label>User ID: </label>
-                                      <input placeholder="Id" readOnly="true" name="id" className="form-control"
-                                         value={this.state.id} onChange={this.idHandler} />
-                                   </div>   
+                                   
                                    <div className="form-group">
                                       <label>User Name: </label>
                                       <input placeholder="Name" readOnly= "true" name="name" className="form-control"

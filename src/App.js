@@ -16,6 +16,9 @@ import TrendingCars from './Components/TrendingCars';
 import TrendingMotorcycles from './Components/TrendingMotorcycles';
 import LikedVideos from './Components/LikedVideos';
 import Account from './Components/Account';
+import AddUser from './Components/AddUser';
+import UpdateUser from './Components/UpdateUser';
+import DeleteUser from './Components/DeleteUser';
 
 export const ListContext = createContext();
 
@@ -25,7 +28,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   // YOUTUBE API SECTION ////////////
-  const YT_API = `https://www.googleapis.com/youtube/v3/search?&part=snippet&maxResults=25&q=vechicle+model${term}&key=AIzaSyB8DNHJ17xT7yTNc01rzHwVG7OFVT7AIfg`;
+  const YT_API = `https://www.googleapis.com/youtube/v3/search?&part=snippet&maxResults=25&q=category+vechicle+model+${term}&key=AIzaSyB8DNHJ17xT7yTNc01rzHwVG7OFVT7AIfg`;
 
   useEffect(() => {
     console.log('useEffect runs: API fetch');
@@ -54,7 +57,7 @@ function App() {
             <SubNav />
           </div>
           <Switch>
-            <Route exact path='/'>
+            <Route path='/' exact>
               {' '}
               <Home />{' '}
             </Route>
@@ -74,10 +77,10 @@ function App() {
               {' '}
               <MyVideos />
             </Route>
-            <Route exact path='/myinformation'>
-              {' '}
-              <Account />
-            </Route>
+            <Route path='/users' component={Account}></Route>
+            <Route path='/add-user' component={AddUser}></Route>
+            <Route path='/update-user/:id' component={UpdateUser}></Route>
+            <Route path='/delete-user/:id' component={DeleteUser}></Route>
             <Route exact path='/trendingairplanes'>
               <TrendingAirPlane />
             </Route>

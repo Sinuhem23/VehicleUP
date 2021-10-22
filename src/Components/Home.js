@@ -19,9 +19,8 @@ export default function Home() {
         <div class='recently_added_playlist_videos'>
           {youTube.map((vid, idx) => (
             <div className='iframe_container'>
-              <li key={idx}>
+              <div key={idx}>
                 <div className='youtubeLi'>
-                  <h3 className='ytTitle'>{vid.snippet.title}</h3>
                   <div className='youtubeInfo'>
                     <iframe
                       width='360'
@@ -32,6 +31,7 @@ export default function Home() {
                       allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                       allowfullscreen
                     ></iframe>
+                    <h3 className='ytTitle'>{vid.snippet.title}</h3>
                     <div>
                       <h4 className='channelTitle'>
                         {vid.snippet.channelTitle}
@@ -55,10 +55,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </li>
+              </div>
             </div>
           ))}
-          <div>
+          {/* <div>
             <iframe
               src='https://www.youtube.com/embed/yh9PRTMFWKk'
               title='YouTube video player'
@@ -66,7 +66,7 @@ export default function Home() {
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
               allowfullscreen
             ></iframe>
-          </div>
+          </div> */}
 
           {/* <div>
             <iframe

@@ -27,7 +27,7 @@ export default function SubNav() {
             <div class='subnav-content'>
               <a href='./myvideos'>My videos</a>
 
-              <a href='./myinformation'>My information</a>
+              <a href='./users'>My information</a>
             </div>
           </div>
           <div class='subnav'>

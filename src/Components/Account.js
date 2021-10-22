@@ -11,7 +11,7 @@ class ListUsers extends Component {
     this.addUser = this.addUser.bind(this);
     this.editUser = this.editUser.bind(this);
     this.deleteUser = this.deleteUser.bind(this);
-    this.viewUser = this.viewUser.bind(this);
+    // this.viewUser = this.viewUser.bind(this);
   }
 
   componentDidMount() {
@@ -37,9 +37,9 @@ class ListUsers extends Component {
     // })
   }
 
-  viewUser(id) {
-    this.props.history.push(`/view-user/${id}`);
-  }
+  // viewUser(id) {
+  //   this.props.history.push(`/view-user/${id}`);
+  // }
 
   render() {
     return (
@@ -58,7 +58,6 @@ class ListUsers extends Component {
           <table className='table table-striped table-bordered'>
             <thead>
               <tr>
-                <th>User Id</th>
                 <th>User Name</th>
                 <th>User Email</th>
                 <th>Actions</th>
@@ -66,8 +65,7 @@ class ListUsers extends Component {
             </thead>
             <tbody>
               {this.state.users.map((user) => (
-                <tr key={user.id}>
-                  <td>{user.id}</td>
+                <tr key={user.Userid}>
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>
@@ -83,12 +81,12 @@ class ListUsers extends Component {
                     >
                       Delete
                     </button>
-                    <button
+                    {/* <button
                       onClick={() => this.viewUser(user.id)}
                       className='btn btn-primary'
                     >
                       View
-                    </button>
+                    </button> */}
                   </td>
                 </tr>
               ))}
